@@ -7,8 +7,8 @@ package fr.pgah.bestioles;
 
 public class BestiolesMain {
     public static void main(String[] args) {
-        BestioleFrame frame = new BestioleFrame(60, 40);
-        int nbBestiole = 50;
+        BestioleFrame frame = new BestioleFrame(600, 400);
+        int nbBestiole = 20000;
         // décommentez chacune de ces lignes au fur et à mesure
         // que les classes sont complétées
         frame.add(nbBestiole, Ours.class);

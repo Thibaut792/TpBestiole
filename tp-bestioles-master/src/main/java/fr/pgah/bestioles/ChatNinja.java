@@ -12,13 +12,16 @@ public class ChatNinja extends Bestiole {
 
         if (info.getEnFace() == Voisin.AUTRE) {
             return Action.INFECTER;
-        }
-        if (info.getEnFace() == Voisin.RIEN) {
+        } else if (info.getAGauche() == Voisin.AUTRE) {
+            return Action.GAUCHE;
+        } else if (info.getADroite() == Voisin.AUTRE) {
+            return Action.DROITE;
+        } else if (info.getDerriere() == Voisin.MEME) {
             return Action.SAUTER;
         }
-        if (info.getDerriere() == Voisin.AUTRE) {
-            return Action.INFECTER;
-        }
+        // if (info.getEnFace() == Voisin.MEME) {
+        // return Action.SAUTER;
+        // }
         return Action.DROITE;
     }
 
